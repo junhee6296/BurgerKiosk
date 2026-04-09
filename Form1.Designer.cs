@@ -47,6 +47,7 @@
             OrderListBox = new ListBox();
             OrderButton = new Button();
             ResetButton = new Button();
+            ErrorLabel = new Label();
             MenuGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -251,9 +252,9 @@
             OrderButton.BackColor = Color.Lime;
             OrderButton.Font = new Font("서울남산체 M", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
             OrderButton.ForeColor = Color.FromArgb(64, 0, 64);
-            OrderButton.Location = new Point(443, 443);
+            OrderButton.Location = new Point(443, 434);
             OrderButton.Name = "OrderButton";
-            OrderButton.Size = new Size(165, 63);
+            OrderButton.Size = new Size(165, 49);
             OrderButton.TabIndex = 4;
             OrderButton.Text = "주문하기";
             OrderButton.UseVisualStyleBackColor = false;
@@ -264,19 +265,31 @@
             ResetButton.BackColor = Color.Red;
             ResetButton.Font = new Font("서울남산체 M", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
             ResetButton.ForeColor = Color.White;
-            ResetButton.Location = new Point(614, 443);
+            ResetButton.Location = new Point(614, 434);
             ResetButton.Name = "ResetButton";
-            ResetButton.Size = new Size(165, 63);
+            ResetButton.Size = new Size(165, 49);
             ResetButton.TabIndex = 5;
             ResetButton.Text = "초기화";
             ResetButton.UseVisualStyleBackColor = false;
             ResetButton.Click += ResetButton_Click;
+            // 
+            // ErrorLabel
+            // 
+            ErrorLabel.AutoSize = true;
+            ErrorLabel.Font = new Font("서울남산 장체 M", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            ErrorLabel.ForeColor = Color.Red;
+            ErrorLabel.Location = new Point(611, 489);
+            ErrorLabel.Name = "ErrorLabel";
+            ErrorLabel.Size = new Size(0, 23);
+            ErrorLabel.TabIndex = 6;
+            ErrorLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(902, 518);
+            Controls.Add(ErrorLabel);
             Controls.Add(ResetButton);
             Controls.Add(OrderButton);
             Controls.Add(OrderListGroupBox);
@@ -318,5 +331,6 @@
         private ListBox OrderListBox;
         private Button OrderButton;
         private Button ResetButton;
+        private Label ErrorLabel;
     }
 }

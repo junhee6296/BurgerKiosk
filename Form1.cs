@@ -11,6 +11,17 @@ namespace BurgerKiosk
             int totalCost = 0; // 총 금액 초기화
             OrderListBox.Items.Clear(); // 리스트박스 초기화 (중복 출력 방지)
 
+            // --- [과제 2: 에러 메시지 표시 로직 추가] ---
+            // 라디오 버튼 3개 중 아무것도 체크되어 있지 않다면 (! 연산자 사용)
+            if (!wpRadio.Checked && !cwpRadio.Checked && !bwpRadio.Checked)
+            {
+                ErrorLabel.Text = "메뉴를 선택해 주세요."; // 화면에 에러 표시
+                return; // 아래의 가격 계산 로직을 실행하지 않고 여기서 메서드 즉시 종료
+            }
+
+            // 정상적으로 메뉴를 선택했다면, 혹시 남아있을지 모를 에러 메시지를 지워줌
+            ErrorLabel.Text = "";
+
             // 1. 메뉴 선택 처리 (RadioButton)
             if (wpRadio.Checked)
             {
@@ -70,6 +81,8 @@ namespace BurgerKiosk
             // 출력 화면 초기화
             OrderListBox.Items.Clear();
             TotalAmountLabel.Text = "총 금액 : 0원";
+
+            ErrorLabel.Text = "";
         }
 
     }
