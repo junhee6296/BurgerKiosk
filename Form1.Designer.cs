@@ -125,6 +125,7 @@
             bwpRadio.TabStop = true;
             bwpRadio.Text = "불고기와퍼";
             bwpRadio.UseVisualStyleBackColor = true;
+            bwpRadio.CheckedChanged += UpdateOrderInfo;
             // 
             // cwpRadio
             // 
@@ -138,6 +139,7 @@
             cwpRadio.TabStop = true;
             cwpRadio.Text = "치즈와퍼";
             cwpRadio.UseVisualStyleBackColor = true;
+            cwpRadio.CheckedChanged += UpdateOrderInfo;
             // 
             // wpRadio
             // 
@@ -151,6 +153,7 @@
             wpRadio.TabStop = true;
             wpRadio.Text = "와퍼버거";
             wpRadio.UseVisualStyleBackColor = true;
+            wpRadio.CheckedChanged += UpdateOrderInfo;
             // 
             // AddOptionBox
             // 
@@ -178,6 +181,7 @@
             sourceCB.TabIndex = 3;
             sourceCB.Text = "소스 추가";
             sourceCB.UseVisualStyleBackColor = true;
+            sourceCB.CheckedChanged += UpdateOrderInfo;
             // 
             // CheeseCB
             // 
@@ -190,6 +194,7 @@
             CheeseCB.TabIndex = 2;
             CheeseCB.Text = "치즈 추가";
             CheeseCB.UseVisualStyleBackColor = true;
+            CheeseCB.CheckedChanged += UpdateOrderInfo;
             // 
             // colaCB
             // 
@@ -202,6 +207,7 @@
             colaCB.TabIndex = 1;
             colaCB.Text = "콜라";
             colaCB.UseVisualStyleBackColor = true;
+            colaCB.CheckedChanged += UpdateOrderInfo;
             // 
             // potatoCB
             // 
@@ -214,6 +220,7 @@
             potatoCB.TabIndex = 0;
             potatoCB.Text = "감자튀김";
             potatoCB.UseVisualStyleBackColor = true;
+            potatoCB.CheckedChanged += UpdateOrderInfo;
             // 
             // OrderListGroupBox
             // 
@@ -300,7 +307,7 @@
             Controls.Add(MainLabel);
             Name = "Form1";
             Text = "키오스크";
-            Load += Form1_Load_1;
+            Shown += Form1_Shown;
             MenuGroupBox.ResumeLayout(false);
             MenuGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

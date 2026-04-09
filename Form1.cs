@@ -5,7 +5,14 @@ namespace BurgerKiosk
         public Form1()
         {
             InitializeComponent();
+
+            wpRadio.Checked = false;
+            cwpRadio.Checked = false;
+            bwpRadio.Checked = false;
+
+            ActiveControl = null;
         }
+
         private void OrderButton_Click(object sender, EventArgs e)
         {
             int totalCost = 0; // 총 금액 초기화
@@ -78,6 +85,9 @@ namespace BurgerKiosk
             CheeseCB.Checked = false;
             sourceCB.Checked = false;
 
+            //선택 재허용
+            wpRadio.TabStop = true;
+
             // 출력 화면 초기화
             OrderListBox.Items.Clear();
             TotalAmountLabel.Text = "총 금액 : 0원";
@@ -85,14 +95,72 @@ namespace BurgerKiosk
             ErrorLabel.Text = "";
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void UpdateOrderInfo(object sender, EventArgs e)
         {
-            AcceptButton = OrderButton;
+            int totalCost = 0; // 가격 누적을 위해 0으로 초기화
+            OrderListBox.Items.Clear(); // 이전 내역 삭제
+
+            // 1. 메뉴 선택 확인 (RadioButton)
+            if (wpRadio.Checked)
+            {
+                totalCost += 5000;
+                OrderListBox.Items.Add("와퍼버거 5,000원");
+            }
+            else if (cwpRadio.Checked)
+            {
+                totalCost += 4000;
+                OrderListBox.Items.Add("치즈와퍼 4,000원");
+            }
+            else if (bwpRadio.Checked)
+            {
+                totalCost += 3000;
+                OrderListBox.Items.Add("불고기와퍼 3,000원");
+            }
+
+            // 2. 추가 옵션 확인 (CheckBox)
+            if (potatoCB.Checked)
+            {
+                totalCost += 3500;
+                OrderListBox.Items.Add("감자튀김 3,500원");
+            }
+            if (colaCB.Checked)
+            {
+                totalCost += 2500;
+                OrderListBox.Items.Add("콜라 2,500원");
+            }
+            if (CheeseCB.Checked)
+            {
+                totalCost += 1500;
+                OrderListBox.Items.Add("치즈 추가 1,500원");
+            }
+            if (sourceCB.Checked)
+            {
+                totalCost += 500;
+                OrderListBox.Items.Add("소스 추가 500원");
+            }
+
+            // 3. 결과 출력 (Label)
+            TotalAmountLabel.Text = "총 금액 : " + totalCost.ToString("#,##0") + "원";
+
+            // 항목이 하나라도 선택되어 금액이 오르면 에러 메시지(과제2)를 지워줍니다.
+            if (totalCost > 0)
+            {
+                ErrorLabel.Text = "";
+            }
         }
 
-        private void Form1_Load_1(object sender, EventArgs e)
+        private void Form1_Shown(object sender, EventArgs e)
         {
+            // 체크박스 선택 강제해제
+            wpRadio.Checked = false;
+            cwpRadio.Checked = false;
+            bwpRadio.Checked = false;
 
+            //탭 버그 수정
+            wpRadio.TabStop = true;
+
+            // 포커스 변경
+            ActiveControl = OrderButton;
         }
     }
 }
