@@ -63,7 +63,7 @@
             MainLabel.Location = new Point(152, 21);
             MainLabel.Name = "MainLabel";
             MainLabel.Size = new Size(538, 76);
-            MainLabel.TabIndex = 0;
+            MainLabel.TabIndex = 4;
             MainLabel.Text = "버거 주문 키오스크";
             // 
             // MenuGroupBox
@@ -121,7 +121,7 @@
             bwpRadio.Location = new Point(18, 241);
             bwpRadio.Name = "bwpRadio";
             bwpRadio.Size = new Size(131, 32);
-            bwpRadio.TabIndex = 6;
+            bwpRadio.TabIndex = 2;
             bwpRadio.TabStop = true;
             bwpRadio.Text = "불고기와퍼";
             bwpRadio.UseVisualStyleBackColor = true;
@@ -134,7 +134,7 @@
             cwpRadio.Location = new Point(18, 148);
             cwpRadio.Name = "cwpRadio";
             cwpRadio.Size = new Size(111, 32);
-            cwpRadio.TabIndex = 5;
+            cwpRadio.TabIndex = 1;
             cwpRadio.TabStop = true;
             cwpRadio.Text = "치즈와퍼";
             cwpRadio.UseVisualStyleBackColor = true;
@@ -147,7 +147,7 @@
             wpRadio.Location = new Point(18, 59);
             wpRadio.Name = "wpRadio";
             wpRadio.Size = new Size(111, 32);
-            wpRadio.TabIndex = 4;
+            wpRadio.TabIndex = 0;
             wpRadio.TabStop = true;
             wpRadio.Text = "와퍼버거";
             wpRadio.UseVisualStyleBackColor = true;
@@ -175,7 +175,7 @@
             sourceCB.Location = new Point(16, 158);
             sourceCB.Name = "sourceCB";
             sourceCB.Size = new Size(119, 32);
-            sourceCB.TabIndex = 5;
+            sourceCB.TabIndex = 3;
             sourceCB.Text = "소스 추가";
             sourceCB.UseVisualStyleBackColor = true;
             // 
@@ -187,7 +187,7 @@
             CheeseCB.Location = new Point(16, 120);
             CheeseCB.Name = "CheeseCB";
             CheeseCB.Size = new Size(119, 32);
-            CheeseCB.TabIndex = 4;
+            CheeseCB.TabIndex = 2;
             CheeseCB.Text = "치즈 추가";
             CheeseCB.UseVisualStyleBackColor = true;
             // 
@@ -199,7 +199,7 @@
             colaCB.Location = new Point(16, 82);
             colaCB.Name = "colaCB";
             colaCB.Size = new Size(71, 32);
-            colaCB.TabIndex = 3;
+            colaCB.TabIndex = 1;
             colaCB.Text = "콜라";
             colaCB.UseVisualStyleBackColor = true;
             // 
@@ -211,7 +211,7 @@
             potatoCB.Location = new Point(16, 43);
             potatoCB.Name = "potatoCB";
             potatoCB.Size = new Size(111, 32);
-            potatoCB.TabIndex = 2;
+            potatoCB.TabIndex = 0;
             potatoCB.Text = "감자튀김";
             potatoCB.UseVisualStyleBackColor = true;
             // 
@@ -224,7 +224,7 @@
             OrderListGroupBox.Location = new Point(592, 100);
             OrderListGroupBox.Name = "OrderListGroupBox";
             OrderListGroupBox.Size = new Size(293, 326);
-            OrderListGroupBox.TabIndex = 3;
+            OrderListGroupBox.TabIndex = 4;
             OrderListGroupBox.TabStop = false;
             OrderListGroupBox.Text = "주문 내역";
             // 
@@ -246,6 +246,7 @@
             OrderListBox.Name = "OrderListBox";
             OrderListBox.Size = new Size(281, 224);
             OrderListBox.TabIndex = 0;
+            OrderListBox.TabStop = false;
             // 
             // OrderButton
             // 
@@ -255,7 +256,7 @@
             OrderButton.Location = new Point(443, 434);
             OrderButton.Name = "OrderButton";
             OrderButton.Size = new Size(165, 49);
-            OrderButton.TabIndex = 4;
+            OrderButton.TabIndex = 3;
             OrderButton.Text = "주문하기";
             OrderButton.UseVisualStyleBackColor = false;
             OrderButton.Click += OrderButton_Click;
@@ -268,7 +269,7 @@
             ResetButton.Location = new Point(614, 434);
             ResetButton.Name = "ResetButton";
             ResetButton.Size = new Size(165, 49);
-            ResetButton.TabIndex = 5;
+            ResetButton.TabIndex = 4;
             ResetButton.Text = "초기화";
             ResetButton.UseVisualStyleBackColor = false;
             ResetButton.Click += ResetButton_Click;
@@ -286,6 +287,7 @@
             // 
             // Form1
             // 
+            AcceptButton = OrderButton;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(902, 518);
@@ -298,6 +300,7 @@
             Controls.Add(MainLabel);
             Name = "Form1";
             Text = "키오스크";
+            Load += Form1_Load_1;
             MenuGroupBox.ResumeLayout(false);
             MenuGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
