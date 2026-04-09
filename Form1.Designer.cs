@@ -29,58 +29,58 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            label1 = new Label();
-            groupBox1 = new GroupBox();
+            MainLabel = new Label();
+            MenuGroupBox = new GroupBox();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
-            radioButton3 = new RadioButton();
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
-            groupBox2 = new GroupBox();
-            groupBox3 = new GroupBox();
-            checkBox3 = new CheckBox();
-            checkBox2 = new CheckBox();
-            checkBox4 = new CheckBox();
-            checkBox5 = new CheckBox();
-            listBox1 = new ListBox();
-            label2 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            groupBox1.SuspendLayout();
+            bwpRadio = new RadioButton();
+            cwpRadio = new RadioButton();
+            wpRadio = new RadioButton();
+            AddOptionBox = new GroupBox();
+            OrderListGroupBox = new GroupBox();
+            potatoCB = new CheckBox();
+            colaCB = new CheckBox();
+            CheeseCB = new CheckBox();
+            sourceCB = new CheckBox();
+            OrderListBox = new ListBox();
+            TotalAmountLabel = new Label();
+            OrderButton = new Button();
+            ResetButton = new Button();
+            MenuGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            groupBox2.SuspendLayout();
-            groupBox3.SuspendLayout();
+            AddOptionBox.SuspendLayout();
+            OrderListGroupBox.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // MainLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("서울남산체 M", 48F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            label1.Location = new Point(152, 21);
-            label1.Name = "label1";
-            label1.Size = new Size(538, 76);
-            label1.TabIndex = 0;
-            label1.Text = "버거 주문 키오스크";
+            MainLabel.AutoSize = true;
+            MainLabel.Font = new Font("서울남산체 M", 48F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            MainLabel.Location = new Point(152, 21);
+            MainLabel.Name = "MainLabel";
+            MainLabel.Size = new Size(538, 76);
+            MainLabel.TabIndex = 0;
+            MainLabel.Text = "버거 주문 키오스크";
             // 
-            // groupBox1
+            // MenuGroupBox
             // 
-            groupBox1.Controls.Add(pictureBox3);
-            groupBox1.Controls.Add(pictureBox2);
-            groupBox1.Controls.Add(pictureBox1);
-            groupBox1.Controls.Add(radioButton3);
-            groupBox1.Controls.Add(radioButton2);
-            groupBox1.Controls.Add(radioButton1);
-            groupBox1.Font = new Font("서울알림체 TTF Bold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            groupBox1.ForeColor = Color.Red;
-            groupBox1.Location = new Point(12, 100);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(340, 406);
-            groupBox1.TabIndex = 1;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "메뉴 선택";
+            MenuGroupBox.Controls.Add(pictureBox3);
+            MenuGroupBox.Controls.Add(pictureBox2);
+            MenuGroupBox.Controls.Add(pictureBox1);
+            MenuGroupBox.Controls.Add(bwpRadio);
+            MenuGroupBox.Controls.Add(cwpRadio);
+            MenuGroupBox.Controls.Add(wpRadio);
+            MenuGroupBox.Font = new Font("서울알림체 TTF Bold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            MenuGroupBox.ForeColor = Color.Red;
+            MenuGroupBox.Location = new Point(12, 100);
+            MenuGroupBox.Name = "MenuGroupBox";
+            MenuGroupBox.Size = new Size(340, 406);
+            MenuGroupBox.TabIndex = 1;
+            MenuGroupBox.TabStop = false;
+            MenuGroupBox.Text = "메뉴 선택";
             // 
             // pictureBox3
             // 
@@ -112,210 +112,209 @@
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
-            // radioButton3
+            // bwpRadio
             // 
-            radioButton3.AutoSize = true;
-            radioButton3.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold);
-            radioButton3.ForeColor = Color.Black;
-            radioButton3.Location = new Point(18, 241);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(131, 32);
-            radioButton3.TabIndex = 6;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "불고기와퍼";
-            radioButton3.UseVisualStyleBackColor = true;
+            bwpRadio.AutoSize = true;
+            bwpRadio.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold);
+            bwpRadio.ForeColor = Color.Black;
+            bwpRadio.Location = new Point(18, 241);
+            bwpRadio.Name = "bwpRadio";
+            bwpRadio.Size = new Size(131, 32);
+            bwpRadio.TabIndex = 6;
+            bwpRadio.TabStop = true;
+            bwpRadio.Text = "불고기와퍼";
+            bwpRadio.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // cwpRadio
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold);
-            radioButton2.ForeColor = Color.Black;
-            radioButton2.Location = new Point(18, 148);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(111, 32);
-            radioButton2.TabIndex = 5;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "치즈와퍼";
-            radioButton2.UseVisualStyleBackColor = true;
+            cwpRadio.AutoSize = true;
+            cwpRadio.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold);
+            cwpRadio.ForeColor = Color.Black;
+            cwpRadio.Location = new Point(18, 148);
+            cwpRadio.Name = "cwpRadio";
+            cwpRadio.Size = new Size(111, 32);
+            cwpRadio.TabIndex = 5;
+            cwpRadio.TabStop = true;
+            cwpRadio.Text = "치즈와퍼";
+            cwpRadio.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // wpRadio
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold);
-            radioButton1.ForeColor = Color.Black;
-            radioButton1.Location = new Point(18, 59);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(111, 32);
-            radioButton1.TabIndex = 4;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "와퍼버거";
-            radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+            wpRadio.AutoSize = true;
+            wpRadio.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold);
+            wpRadio.ForeColor = Color.Black;
+            wpRadio.Location = new Point(18, 59);
+            wpRadio.Name = "wpRadio";
+            wpRadio.Size = new Size(111, 32);
+            wpRadio.TabIndex = 4;
+            wpRadio.TabStop = true;
+            wpRadio.Text = "와퍼버거";
+            wpRadio.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // AddOptionBox
             // 
-            groupBox2.Controls.Add(checkBox5);
-            groupBox2.Controls.Add(checkBox4);
-            groupBox2.Controls.Add(checkBox2);
-            groupBox2.Controls.Add(checkBox3);
-            groupBox2.Font = new Font("서울알림체 TTF Bold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            groupBox2.ForeColor = Color.Red;
-            groupBox2.Location = new Point(358, 100);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(228, 326);
-            groupBox2.TabIndex = 2;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "추가 옵션";
-            groupBox2.Enter += groupBox2_Enter;
+            AddOptionBox.Controls.Add(sourceCB);
+            AddOptionBox.Controls.Add(CheeseCB);
+            AddOptionBox.Controls.Add(colaCB);
+            AddOptionBox.Controls.Add(potatoCB);
+            AddOptionBox.Font = new Font("서울알림체 TTF Bold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            AddOptionBox.ForeColor = Color.Red;
+            AddOptionBox.Location = new Point(358, 100);
+            AddOptionBox.Name = "AddOptionBox";
+            AddOptionBox.Size = new Size(228, 326);
+            AddOptionBox.TabIndex = 2;
+            AddOptionBox.TabStop = false;
+            AddOptionBox.Text = "추가 옵션";
             // 
-            // groupBox3
+            // OrderListGroupBox
             // 
-            groupBox3.Controls.Add(label2);
-            groupBox3.Controls.Add(listBox1);
-            groupBox3.Font = new Font("서울알림체 TTF Bold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            groupBox3.ForeColor = Color.Red;
-            groupBox3.Location = new Point(592, 100);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(293, 326);
-            groupBox3.TabIndex = 3;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "주문 내역";
+            OrderListGroupBox.Controls.Add(TotalAmountLabel);
+            OrderListGroupBox.Controls.Add(OrderListBox);
+            OrderListGroupBox.Font = new Font("서울알림체 TTF Bold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            OrderListGroupBox.ForeColor = Color.Red;
+            OrderListGroupBox.Location = new Point(592, 100);
+            OrderListGroupBox.Name = "OrderListGroupBox";
+            OrderListGroupBox.Size = new Size(293, 326);
+            OrderListGroupBox.TabIndex = 3;
+            OrderListGroupBox.TabStop = false;
+            OrderListGroupBox.Text = "주문 내역";
             // 
-            // checkBox3
+            // potatoCB
             // 
-            checkBox3.AutoSize = true;
-            checkBox3.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            checkBox3.ForeColor = Color.Black;
-            checkBox3.Location = new Point(16, 43);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(111, 32);
-            checkBox3.TabIndex = 2;
-            checkBox3.Text = "감자튀김";
-            checkBox3.UseVisualStyleBackColor = true;
+            potatoCB.AutoSize = true;
+            potatoCB.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            potatoCB.ForeColor = Color.Black;
+            potatoCB.Location = new Point(16, 43);
+            potatoCB.Name = "potatoCB";
+            potatoCB.Size = new Size(111, 32);
+            potatoCB.TabIndex = 2;
+            potatoCB.Text = "감자튀김";
+            potatoCB.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // colaCB
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            checkBox2.ForeColor = Color.Black;
-            checkBox2.Location = new Point(16, 82);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(71, 32);
-            checkBox2.TabIndex = 3;
-            checkBox2.Text = "콜라";
-            checkBox2.UseVisualStyleBackColor = true;
+            colaCB.AutoSize = true;
+            colaCB.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            colaCB.ForeColor = Color.Black;
+            colaCB.Location = new Point(16, 82);
+            colaCB.Name = "colaCB";
+            colaCB.Size = new Size(71, 32);
+            colaCB.TabIndex = 3;
+            colaCB.Text = "콜라";
+            colaCB.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // CheeseCB
             // 
-            checkBox4.AutoSize = true;
-            checkBox4.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            checkBox4.ForeColor = Color.Black;
-            checkBox4.Location = new Point(16, 120);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(119, 32);
-            checkBox4.TabIndex = 4;
-            checkBox4.Text = "치즈 추가";
-            checkBox4.UseVisualStyleBackColor = true;
+            CheeseCB.AutoSize = true;
+            CheeseCB.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            CheeseCB.ForeColor = Color.Black;
+            CheeseCB.Location = new Point(16, 120);
+            CheeseCB.Name = "CheeseCB";
+            CheeseCB.Size = new Size(119, 32);
+            CheeseCB.TabIndex = 4;
+            CheeseCB.Text = "치즈 추가";
+            CheeseCB.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // sourceCB
             // 
-            checkBox5.AutoSize = true;
-            checkBox5.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            checkBox5.ForeColor = Color.Black;
-            checkBox5.Location = new Point(16, 158);
-            checkBox5.Name = "checkBox5";
-            checkBox5.Size = new Size(119, 32);
-            checkBox5.TabIndex = 5;
-            checkBox5.Text = "소스 추가";
-            checkBox5.UseVisualStyleBackColor = true;
+            sourceCB.AutoSize = true;
+            sourceCB.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sourceCB.ForeColor = Color.Black;
+            sourceCB.Location = new Point(16, 158);
+            sourceCB.Name = "sourceCB";
+            sourceCB.Size = new Size(119, 32);
+            sourceCB.TabIndex = 5;
+            sourceCB.Text = "소스 추가";
+            sourceCB.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // OrderListBox
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(6, 43);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(281, 228);
-            listBox1.TabIndex = 0;
+            OrderListBox.Font = new Font("서울알림체 TTF Bold", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            OrderListBox.FormattingEnabled = true;
+            OrderListBox.Location = new Point(6, 43);
+            OrderListBox.Name = "OrderListBox";
+            OrderListBox.Size = new Size(281, 224);
+            OrderListBox.TabIndex = 0;
             // 
-            // label2
+            // TotalAmountLabel
             // 
-            label2.AutoSize = true;
-            label2.ForeColor = Color.Blue;
-            label2.Location = new Point(6, 281);
-            label2.Name = "label2";
-            label2.Size = new Size(142, 28);
-            label2.TabIndex = 4;
-            label2.Text = "총 금액 : 0원";
+            TotalAmountLabel.AutoSize = true;
+            TotalAmountLabel.ForeColor = Color.Blue;
+            TotalAmountLabel.Location = new Point(6, 281);
+            TotalAmountLabel.Name = "TotalAmountLabel";
+            TotalAmountLabel.Size = new Size(142, 28);
+            TotalAmountLabel.TabIndex = 4;
+            TotalAmountLabel.Text = "총 금액 : 0원";
             // 
-            // button1
+            // OrderButton
             // 
-            button1.BackColor = Color.Lime;
-            button1.Font = new Font("서울남산체 M", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            button1.ForeColor = Color.FromArgb(64, 0, 64);
-            button1.Location = new Point(443, 443);
-            button1.Name = "button1";
-            button1.Size = new Size(165, 63);
-            button1.TabIndex = 4;
-            button1.Text = "주문하기";
-            button1.UseVisualStyleBackColor = false;
+            OrderButton.BackColor = Color.Lime;
+            OrderButton.Font = new Font("서울남산체 M", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            OrderButton.ForeColor = Color.FromArgb(64, 0, 64);
+            OrderButton.Location = new Point(443, 443);
+            OrderButton.Name = "OrderButton";
+            OrderButton.Size = new Size(165, 63);
+            OrderButton.TabIndex = 4;
+            OrderButton.Text = "주문하기";
+            OrderButton.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // ResetButton
             // 
-            button2.BackColor = Color.Red;
-            button2.Font = new Font("서울남산체 M", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(614, 443);
-            button2.Name = "button2";
-            button2.Size = new Size(165, 63);
-            button2.TabIndex = 5;
-            button2.Text = "초기화";
-            button2.UseVisualStyleBackColor = false;
+            ResetButton.BackColor = Color.Red;
+            ResetButton.Font = new Font("서울남산체 M", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            ResetButton.ForeColor = Color.White;
+            ResetButton.Location = new Point(614, 443);
+            ResetButton.Name = "ResetButton";
+            ResetButton.Size = new Size(165, 63);
+            ResetButton.TabIndex = 5;
+            ResetButton.Text = "초기화";
+            ResetButton.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(902, 518);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(groupBox3);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
-            Controls.Add(label1);
+            Controls.Add(ResetButton);
+            Controls.Add(OrderButton);
+            Controls.Add(OrderListGroupBox);
+            Controls.Add(AddOptionBox);
+            Controls.Add(MenuGroupBox);
+            Controls.Add(MainLabel);
             Name = "Form1";
             Text = "키오스크";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            MenuGroupBox.ResumeLayout(false);
+            MenuGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
+            AddOptionBox.ResumeLayout(false);
+            AddOptionBox.PerformLayout();
+            OrderListGroupBox.ResumeLayout(false);
+            OrderListGroupBox.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private GroupBox groupBox1;
-        private GroupBox groupBox2;
-        private GroupBox groupBox3;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
+        private Label MainLabel;
+        private GroupBox MenuGroupBox;
+        private GroupBox AddOptionBox;
+        private GroupBox OrderListGroupBox;
+        private RadioButton bwpRadio;
+        private RadioButton cwpRadio;
+        private RadioButton wpRadio;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
-        private CheckBox checkBox5;
-        private CheckBox checkBox4;
-        private CheckBox checkBox2;
-        private CheckBox checkBox3;
-        private Label label2;
-        private ListBox listBox1;
-        private Button button1;
-        private Button button2;
+        private CheckBox sourceCB;
+        private CheckBox CheeseCB;
+        private CheckBox colaCB;
+        private CheckBox potatoCB;
+        private Label TotalAmountLabel;
+        private ListBox OrderListBox;
+        private Button OrderButton;
+        private Button ResetButton;
     }
 }
