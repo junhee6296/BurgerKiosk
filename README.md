@@ -5,10 +5,14 @@
 - 사용한 플랫폼:
   - C#, .NET Windows Forms, Visual Studio, GitHub
 - 사용한 컨트롤:
-  - Label, TextBox, Button
+  - Label, Listbox, GroupBox, RadioButton, Checkbox, Button
 - 사용한 기술과 구현한 기능:
   - Visual Studio를 이용하여 UI 디자인
   - if문을 이용한 메뉴 가격 책정
+  - checkchanged 이벤트를 통한 실시간 계산금액 수정
+  - 탭 순서 설정을 통한 TAB키 이동 우선순위 배정
+  - !, && 연산자를 이용한 조건 세분화
+  - Button과 이벤트 연결
 
 
 ## 실행 화면 (과제1)
