@@ -38,13 +38,13 @@
             cwpRadio = new RadioButton();
             wpRadio = new RadioButton();
             AddOptionBox = new GroupBox();
-            OrderListGroupBox = new GroupBox();
-            potatoCB = new CheckBox();
-            colaCB = new CheckBox();
-            CheeseCB = new CheckBox();
             sourceCB = new CheckBox();
-            OrderListBox = new ListBox();
+            CheeseCB = new CheckBox();
+            colaCB = new CheckBox();
+            potatoCB = new CheckBox();
+            OrderListGroupBox = new GroupBox();
             TotalAmountLabel = new Label();
+            OrderListBox = new ListBox();
             OrderButton = new Button();
             ResetButton = new Button();
             MenuGroupBox.SuspendLayout();
@@ -166,42 +166,17 @@
             AddOptionBox.TabStop = false;
             AddOptionBox.Text = "추가 옵션";
             // 
-            // OrderListGroupBox
+            // sourceCB
             // 
-            OrderListGroupBox.Controls.Add(TotalAmountLabel);
-            OrderListGroupBox.Controls.Add(OrderListBox);
-            OrderListGroupBox.Font = new Font("서울알림체 TTF Bold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            OrderListGroupBox.ForeColor = Color.Red;
-            OrderListGroupBox.Location = new Point(592, 100);
-            OrderListGroupBox.Name = "OrderListGroupBox";
-            OrderListGroupBox.Size = new Size(293, 326);
-            OrderListGroupBox.TabIndex = 3;
-            OrderListGroupBox.TabStop = false;
-            OrderListGroupBox.Text = "주문 내역";
-            // 
-            // potatoCB
-            // 
-            potatoCB.AutoSize = true;
-            potatoCB.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            potatoCB.ForeColor = Color.Black;
-            potatoCB.Location = new Point(16, 43);
-            potatoCB.Name = "potatoCB";
-            potatoCB.Size = new Size(111, 32);
-            potatoCB.TabIndex = 2;
-            potatoCB.Text = "감자튀김";
-            potatoCB.UseVisualStyleBackColor = true;
-            // 
-            // colaCB
-            // 
-            colaCB.AutoSize = true;
-            colaCB.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            colaCB.ForeColor = Color.Black;
-            colaCB.Location = new Point(16, 82);
-            colaCB.Name = "colaCB";
-            colaCB.Size = new Size(71, 32);
-            colaCB.TabIndex = 3;
-            colaCB.Text = "콜라";
-            colaCB.UseVisualStyleBackColor = true;
+            sourceCB.AutoSize = true;
+            sourceCB.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            sourceCB.ForeColor = Color.Black;
+            sourceCB.Location = new Point(16, 158);
+            sourceCB.Name = "sourceCB";
+            sourceCB.Size = new Size(119, 32);
+            sourceCB.TabIndex = 5;
+            sourceCB.Text = "소스 추가";
+            sourceCB.UseVisualStyleBackColor = true;
             // 
             // CheeseCB
             // 
@@ -215,26 +190,42 @@
             CheeseCB.Text = "치즈 추가";
             CheeseCB.UseVisualStyleBackColor = true;
             // 
-            // sourceCB
+            // colaCB
             // 
-            sourceCB.AutoSize = true;
-            sourceCB.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            sourceCB.ForeColor = Color.Black;
-            sourceCB.Location = new Point(16, 158);
-            sourceCB.Name = "sourceCB";
-            sourceCB.Size = new Size(119, 32);
-            sourceCB.TabIndex = 5;
-            sourceCB.Text = "소스 추가";
-            sourceCB.UseVisualStyleBackColor = true;
+            colaCB.AutoSize = true;
+            colaCB.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            colaCB.ForeColor = Color.Black;
+            colaCB.Location = new Point(16, 82);
+            colaCB.Name = "colaCB";
+            colaCB.Size = new Size(71, 32);
+            colaCB.TabIndex = 3;
+            colaCB.Text = "콜라";
+            colaCB.UseVisualStyleBackColor = true;
             // 
-            // OrderListBox
+            // potatoCB
             // 
-            OrderListBox.Font = new Font("서울알림체 TTF Bold", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            OrderListBox.FormattingEnabled = true;
-            OrderListBox.Location = new Point(6, 43);
-            OrderListBox.Name = "OrderListBox";
-            OrderListBox.Size = new Size(281, 224);
-            OrderListBox.TabIndex = 0;
+            potatoCB.AutoSize = true;
+            potatoCB.Font = new Font("서울남산 장체 M", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            potatoCB.ForeColor = Color.Black;
+            potatoCB.Location = new Point(16, 43);
+            potatoCB.Name = "potatoCB";
+            potatoCB.Size = new Size(111, 32);
+            potatoCB.TabIndex = 2;
+            potatoCB.Text = "감자튀김";
+            potatoCB.UseVisualStyleBackColor = true;
+            // 
+            // OrderListGroupBox
+            // 
+            OrderListGroupBox.Controls.Add(TotalAmountLabel);
+            OrderListGroupBox.Controls.Add(OrderListBox);
+            OrderListGroupBox.Font = new Font("서울알림체 TTF Bold", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            OrderListGroupBox.ForeColor = Color.Red;
+            OrderListGroupBox.Location = new Point(592, 100);
+            OrderListGroupBox.Name = "OrderListGroupBox";
+            OrderListGroupBox.Size = new Size(293, 326);
+            OrderListGroupBox.TabIndex = 3;
+            OrderListGroupBox.TabStop = false;
+            OrderListGroupBox.Text = "주문 내역";
             // 
             // TotalAmountLabel
             // 
@@ -245,6 +236,15 @@
             TotalAmountLabel.Size = new Size(142, 28);
             TotalAmountLabel.TabIndex = 4;
             TotalAmountLabel.Text = "총 금액 : 0원";
+            // 
+            // OrderListBox
+            // 
+            OrderListBox.Font = new Font("서울알림체 TTF Bold", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            OrderListBox.FormattingEnabled = true;
+            OrderListBox.Location = new Point(6, 43);
+            OrderListBox.Name = "OrderListBox";
+            OrderListBox.Size = new Size(281, 224);
+            OrderListBox.TabIndex = 0;
             // 
             // OrderButton
             // 
@@ -257,6 +257,7 @@
             OrderButton.TabIndex = 4;
             OrderButton.Text = "주문하기";
             OrderButton.UseVisualStyleBackColor = false;
+            OrderButton.Click += OrderButton_Click;
             // 
             // ResetButton
             // 
@@ -269,6 +270,7 @@
             ResetButton.TabIndex = 5;
             ResetButton.Text = "초기화";
             ResetButton.UseVisualStyleBackColor = false;
+            ResetButton.Click += ResetButton_Click;
             // 
             // Form1
             // 
